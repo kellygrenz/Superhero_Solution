@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import HeroesList from './HeroesList'
+import HeroesList from './Heroes/HeroesList'
 import Home from './Home'
-import Header from './Header'
-import NavBar from './NavBar'
+import Header from './Components/Header'
+import NavBar from './Components/NavBar'
 import $ from 'jquery'
-import CreateHeroContainer from './CreateHeroContainer'
-import VillainsList from './VillainsList'
-import CreateVillainContainer from './CreateVillainContainer'
+import CreateHeroContainer from './Heroes/CreateHeroContainer'
+import VillainsList from './Villains/VillainsList'
+import CreateVillainContainer from './Villains/CreateVillainContainer'
 import {
   BrowserRouter as Router,
   Route
