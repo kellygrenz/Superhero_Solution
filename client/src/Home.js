@@ -5,19 +5,18 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: '3%',
-    marginLeft: '5%',
-    marginRight: '5%'
+    backgroundColor: '#22313F'
   },
   header: {
     fontFamily: 'Candal, sans-serif',
     color: '#e74c3c',
+    fontSize: '28px',
     marginBottom: '1%'
   },
   subHeader: {
     fontFamily: 'Roboto, sans-serif',
-    color: '#2c3e50',
+    color: '#fff',
+    fontSize: '18px',
     marginTop: '0%'
   }
 }
@@ -25,8 +24,8 @@ const styles = {
 const Home = () => {
   return (
     <div style={styles.container}>
-      <h2 style={styles.header}>Home.</h2>
-      <h4 style={styles.subHeader}>Welcome to the home page.</h4>
+      <h2 style={styles.header}>Home</h2>
+      <h4 style={styles.subHeader}>Let's meet the Superheroes & Villains</h4>
     </div>
   )
 }

@@ -7,7 +7,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#22313F',
+    backgroundColor: '#22313F'
     
   },
   header: {

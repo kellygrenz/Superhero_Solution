@@ -112,7 +112,8 @@ const HeroCard = ({ hero, deleteHero, showUniqueHero }) => {
 
 HeroCard.propTypes = {
   hero: PropTypes.object.isRequired,
-  deleteHero: PropTypes.func.isRequired
+  deleteHero: PropTypes.func.isRequired,
+  showUniqueHero: PropTypes.func.isRequired
 }
 
 export default HeroCard

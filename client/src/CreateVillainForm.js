@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const styles = {
   container: {
-    backgroundColor: '#D64541',
+    backgroundColor: '#EC644B',
     margin: '5%',
     padding: '30px',
     width: '70%',

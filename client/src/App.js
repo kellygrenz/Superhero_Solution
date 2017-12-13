@@ -55,7 +55,7 @@ class App extends Component {
 
   showUniqueVillain = (villain) => {
     $.ajax({
-      url: `/api/villains/${villain._id}`,
+      url: `/api/villains/${villain._Id}`,
       method: 'GET'
     }).done(response => {
       console.log(response)

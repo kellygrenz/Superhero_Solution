@@ -111,6 +111,7 @@ VillainCard.propTypes = {
   villain: PropTypes.object.isRequired,
   deleteVillain: PropTypes.func.isRequired,
   showUniqueVillain: PropTypes.func.isRequired
+  
 }
 
 export default VillainCard
