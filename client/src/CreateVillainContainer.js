@@ -10,26 +10,25 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: '3%',
-    marginLeft: '5%',
-    marginRight: '5%'
+    backgroundColor: '#22313F'
   },
   header: {
     fontFamily: 'Candal, sans-serif',
     color: '#e74c3c',
+    fontSize: '28px',
     marginBottom: '1%'
   },
   subHeader: {
     fontFamily: 'Roboto, sans-serif',
-    color: '#2c3e50',
+    color: '#fff',
+    fontSize: '18px',
     marginTop: '0%'
   },
   formSection: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#2c3e50',
+    backgroundColor: '#C0392B',
     borderRadius: '2px'
   }
 }
@@ -68,8 +67,8 @@ class CreateVillainContainer extends Component {
     return (
       <div>
         <div style={styles.container}>
-          <h2 style={styles.header}>Create A Villain.</h2>
-          <h4 style={styles.subHeader}>Add a new villain to the list.</h4>
+          <h2 style={styles.header}>Build Your Own Villain</h2>
+          <h4 style={styles.subHeader}>Add a new villain to the collection</h4>
         </div>
         <div style={styles.formSection}>
         <CreateVillainForm

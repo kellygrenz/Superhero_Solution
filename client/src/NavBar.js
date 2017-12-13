@@ -4,16 +4,13 @@ import {
 } from 'react-router-dom'
 
 const styles = {
-  container: {
+  navContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    backgroundColor: '#2c3e50',
-    paddingLeft: '3%',
-    paddingRight: '3%',
-    height: '12vh',
-    alignItems: 'center',
-    borderRadius: '2px',
-    boxShadow: '2px 6px 10px #bdc3c7'
+    backgroundColor: '#E9D460',
+    padding: '40px',
+    alignItems: 'center'
+    
   },
   header: {
     display: 'flex',
@@ -44,7 +41,9 @@ const styles = {
   },
   link: {
     textDecoration: 'none',
-    color: '#ecf0f1',
+    fontFamily: 'Candal, sans-serif',
+    fontSize: '20px',
+    color: '#019875',
     marginLeft: '3%',
     marginRight: '3%'
   }
@@ -52,20 +51,15 @@ const styles = {
 
 const NavBar = () => {
   return (
-    <div style={styles.container}>
-      <div style={styles.header}>
-        <h1 style={styles.heroHeader}>Superheroes</h1>
-        <h1 style={styles.and}>/</h1>
-        <h1 style={styles.villainHeader}>Villains</h1>
-      </div>
-      <nav style={styles.nav}>
+    
+      <nav style={styles.navContainer}>
         <Link style={styles.link} to='/'> Home </Link>
         <Link style={styles.link} to='/heroes'> Heroes </Link>
         <Link style={styles.link} to='/create-hero'> Create Hero </Link>
         <Link style={styles.link} to='/villains'> Villains </Link>
         <Link style={styles.link} to='/create-villain'> Create Villain </Link>
       </nav>
-    </div>
+    
   )
 }
 

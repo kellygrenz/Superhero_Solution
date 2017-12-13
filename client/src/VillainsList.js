@@ -7,36 +7,35 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: '3%',
-    marginLeft: '5%',
-    marginRight: '5%'
+    backgroundColor: '#22313F',
   },
   header: {
     fontFamily: 'Candal, sans-serif',
     color: '#e74c3c',
+    fontSize: '28px',
     marginBottom: '1%'
   },
   subHeader: {
     fontFamily: 'Roboto, sans-serif',
-    color: '#2c3e50',
+    color: '#fff',
+    fontSize: '18px',
     marginTop: '0%'
   },
   villainSection: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#2c3e50',
+    backgroundColor: '#3FC380',
     borderRadius: '2px'
   }
 }
 
-const VillainsList = ({ villains, deleteVillain }) => {
+const VillainsList = ({ villains, deleteVillain, showUniqueVillain }) => {
   return (
     <div>
       <div style={styles.container}>
-        <h2 style={styles.header}>Villains.</h2>
-        <h4 style={styles.subHeader}>This is where the bad guys are at.</h4>
+        <h2 style={styles.header}>Villains</h2>
+        <h4 style={styles.subHeader}>Meet the Villains</h4>
       </div>
       <div style={styles.villainSection}>
       {
@@ -45,6 +44,7 @@ const VillainsList = ({ villains, deleteVillain }) => {
             villain={villain}
             key={index}
             deleteVillain={() => deleteVillain(villain)}
+            showUniqueVillain={() => showUniqueVillain(villain)}
           />
         })
       }

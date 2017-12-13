@@ -7,36 +7,36 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: '3%',
-    marginLeft: '5%',
-    marginRight: '5%'
+    backgroundColor: '#22313F',
+    
   },
   header: {
     fontFamily: 'Candal, sans-serif',
+    fontSize: '28px',
     color: '#e74c3c',
     marginBottom: '1%'
   },
   subHeader: {
     fontFamily: 'Roboto, sans-serif',
-    color: '#2c3e50',
+    color: '#fff',
+    fontSize: '18px',
     marginTop: '0%'
   },
   heroSection: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#2c3e50',
+    backgroundColor: '#3FC380',
     borderRadius: '2px'
   }
 }
 
-const HeroesList = ({ heroes, deleteHero }) => {
+const HeroesList = ({ heroes, deleteHero, showUniqueHero }) => {
   return (
     <div>
       <div style={styles.container}>
-        <h2 style={styles.header}>Heroes.</h2>
-        <h4 style={styles.subHeader}>This is where all the hero stuff is at.</h4>
+        <h2 style={styles.header}>Heroes</h2>
+        <h4 style={styles.subHeader}>Meet the Heroes</h4>
       </div>
       <div style={styles.heroSection}>
         {
@@ -45,6 +45,7 @@ const HeroesList = ({ heroes, deleteHero }) => {
               hero={hero}
               key={index}
               deleteHero={() => deleteHero(hero)}
+              showUniqueHero={() => showUniqueHero(hero)}
             />
           })
         }

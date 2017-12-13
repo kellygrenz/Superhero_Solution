@@ -3,28 +3,48 @@ import PropTypes from 'prop-types'
 
 const styles = {
   container: {
-    backgroundColor: '#34495e',
+    backgroundColor: '#D64541',
     margin: '5%',
-    padding: '5%',
-    width: '60%',
+    padding: '30px',
+    width: '70%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   section: {
-    padding: '2%'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%'
   },
   titles: {
     fontFamily: 'Candal, sans-serif',
-    color: '#e74c3c'
+    color: '#fff',
+    fontSize: '20px',
+    marginBottom: '10px',
+    display: 'flex',
+    alignItems: 'center'
   },
   input: {
-    width: '50%',
+    width: '100%',
     display: 'flex',
-    alignContent: 'flex-end'
+    padding: '10px',
+    border: 'none',
+    marginBottom: '20px'
   },
   button: {
-    marginLeft: '20%',
-    marginTop: '4%'
+    display: 'flex',
+    background: '#019875',
+    width: '300px',
+    padding: '10px',
+    alignItems: 'center',
+    flexDirection: 'column',
+    marginTop: '35px',
+    border: 'none',
+    fontFamily: 'Candal, sans-serif',
+    fontSize: '18px',
+    color: '#fff',
+    borderRadius: '0'
   }
 }
 
@@ -48,7 +68,7 @@ const CreateVillainForm = ({ onNameChange, onImageChange, onUniverseChange, onNe
           <label style={styles.titles}>Nemesis: </label>
           <input style={styles.input} type='text' placeholder='Type Nemesis Here' onChange={onNemesisChange} />
         </div>
-        <button style={styles.button} onClick={submitVillain}> SUBMIT </button>
+        <button style={styles.button} onClick={submitVillain}> Add New Villain </button>
       </form>
     </div>
   )
