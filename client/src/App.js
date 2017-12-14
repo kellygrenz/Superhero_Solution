@@ -7,6 +7,8 @@ import $ from 'jquery'
 import CreateHeroContainer from './Heroes/CreateHeroContainer'
 import VillainsList from './Villains/VillainsList'
 import CreateVillainContainer from './Villains/CreateVillainContainer'
+import HeroContainer from './Heroes/HeroContainer'
+import EditHeroContainer from './Heroes/EditHeroContainer'
 import {
   BrowserRouter as Router,
   Route
@@ -95,12 +97,14 @@ class App extends Component {
             ? <Route path='/heroes' render={() =>  <HeroesList heroes={this.state.heroes} deleteHero={this.deleteHero} showUniqueHero={this.showUniqueHero} />} />
             : 'No Heroes'
           }
+          <Route path='/hero/:heroId' render={() => <HeroContainer />} />
           <Route path='/create-villain' render={() => <CreateVillainContainer loadVillainsFromServer={this.loadVillainsFromServer} />} />
           {
             this.state.villains
             ? <Route path='/villains' render={() => <VillainsList villains={this.state.villains} deleteVillain={this.deleteVillain} showUniqueVillain={this.showUniqueVillain}/>} />
             : 'No Villains'
           }
+          <Route path='/edit-hero/:heroId' render={() => <EditHeroContainer />} />
         </div>
       </Router>
     )

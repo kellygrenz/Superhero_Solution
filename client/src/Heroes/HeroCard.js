@@ -1,5 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {
+  Link
+} from 'react-router-dom'
 
 const styles = {
   container: {
@@ -28,7 +31,7 @@ const styles = {
     fontSize: '22px'
   },
   bottomSection: {
-    borderTop: '1px solid #ecf0f1',
+    borderTop: '1px dashed #ecf0f1',
     margin: '10%',
     paddingTop: '3%',
     paddingLeft: '7%',
@@ -105,6 +108,7 @@ const HeroCard = ({ hero, deleteHero, showUniqueHero }) => {
       <div style={styles.buttons}>
         <button style={styles.infoButton} onClick={showUniqueHero}> More Info </button>
         <button style={styles.deleteButton} onClick={deleteHero}> Delete </button>
+        <Link to={`/hero/${hero._id}`}>View Hero</Link>
       </div>
     </div>
   )

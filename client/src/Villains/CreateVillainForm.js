@@ -34,7 +34,7 @@ const styles = {
   },
   button: {
     display: 'flex',
-    background: '#019875',
+    background: '#E9D460',
     width: '300px',
     padding: '10px',
     alignItems: 'center',

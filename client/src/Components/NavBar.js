@@ -43,7 +43,7 @@ const styles = {
     textDecoration: 'none',
     fontFamily: 'Candal, sans-serif',
     fontSize: '20px',
-    color: '#019875',
+    color: '#22313F',
     marginLeft: '3%',
     marginRight: '3%'
   }

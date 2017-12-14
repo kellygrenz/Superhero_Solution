@@ -9,7 +9,7 @@ const styles = {
     marginRight: '2%',
     marginBottom: '2%',
     paddingBottom: '1%',
-    backgroundColor: '#34495e',
+    backgroundColor: '#019875',
   },
   topSection: {
     display: 'flex',
@@ -22,12 +22,12 @@ const styles = {
   },
   name: {
     fontFamily: 'Candal, sans-serif',
-    color: '#7f8c8d',
+    color: '#E9D460',
     marginBottom: '4%',
     fontSize: '20px'
   },
   bottomSection: {
-    borderTop: '1px solid #ecf0f1',
+    borderTop: '1px dashed #ecf0f1',
     margin: '10%',
     paddingTop: '3%',
     paddingLeft: '7%',
