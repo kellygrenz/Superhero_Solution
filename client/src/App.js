@@ -8,6 +8,7 @@ import CreateHeroContainer from './Heroes/CreateHeroContainer'
 import VillainsList from './Villains/VillainsList'
 import CreateVillainContainer from './Villains/CreateVillainContainer'
 import HeroContainer from './Heroes/HeroContainer'
+import VillainContainer from './Villains/VillainContainer'
 import EditHeroContainer from './Heroes/EditHeroContainer'
 import {
   BrowserRouter as Router,
@@ -56,8 +57,9 @@ class App extends Component {
   }
 
   showUniqueVillain = (villain) => {
+    console.log('Villain has been summoned', villain)
     $.ajax({
-      url: `/api/villains/${villain._Id}`,
+      url: `/api/villains/${villain._id}`,
       method: 'GET'
     }).done(response => {
       console.log(response)
@@ -105,6 +107,7 @@ class App extends Component {
             : 'No Villains'
           }
           <Route path='/edit-hero/:heroId' render={() => <EditHeroContainer />} />
+          <Route path='/villains/:villainId' render={() => <VillainContainer />} />
         </div>
       </Router>
     )

@@ -1,5 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {
+  Link
+} from 'react-router-dom'
 
 const styles = {
   container: {
@@ -102,6 +105,7 @@ const VillainCard = ({ villain, deleteVillain, showUniqueVillain }) => {
         <div style={styles.buttons}>
           <button style={styles.infoButton} onClick={showUniqueVillain}>More Info</button>
           <button style={styles.deleteButton} onClick={deleteVillain}>Delete</button>
+          <Link to={`/villains/${villain._id}`}>Edit Villain</Link>
       </div>
     </div>
   )
