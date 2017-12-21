@@ -4,6 +4,34 @@ import $ from 'jquery'
 import PropTypes from 'prop-types' 
 import EditHeroForm from './EditHeroForm'
 
+const style = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: '#412446'
+  },
+  header: {
+    fontFamily: 'Candal, sans-serif',
+    color: '#e74c3c',
+    fontSize: '28px',
+    marginBottom: '1%'
+  },
+  subHeader: {
+    fontFamily: 'Roboto, sans-serif',
+    color: '#fff',
+    fontSize: '18px',
+    marginTop: '0%'
+  },
+  formSection: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    backgroundColor: '#C0392B',
+    borderRadius: '2px'
+  }
+}
+
 class EditHeroContainer extends Component {
   state = {
     name: undefined,
@@ -65,6 +93,11 @@ class EditHeroContainer extends Component {
     const {name, img, nemesis, universe, superPower} = this.state
     return (
       <div>
+        <div style={style.container}>
+          <h2 style={style.header}>Edit This Hero</h2>
+          <h4 style={style.subHeader}>Make them even MORE heroic!</h4>
+        </div>
+        <div style={style.formSection}>
         {
           !this.state.loading
             ? <EditHeroForm 
@@ -79,9 +112,11 @@ class EditHeroContainer extends Component {
               onUniverseChange={this.onUniverseChange}
               onSuperPowerChange={this.onSuperPowerChange}
               submitHeroToServer={this.submitHeroToServer}
+              villains={this.props.villains}
             />
             : <h1>loading.... </h1>
         }
+        </div>
         
         
       </div>

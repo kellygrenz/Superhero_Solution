@@ -48,7 +48,7 @@ const styles = {
   }
 }
 
-const CreateVillainForm = ({ onNameChange, onImageChange, onUniverseChange, onNemesisChange, submitVillain }) => {
+const CreateVillainForm = ({ onNameChange, onImageChange, onUniverseChange, onNemesisChange, submitVillain, heroes }) => {
   return (
     <div style={styles.container}>
       <form>
@@ -66,6 +66,15 @@ const CreateVillainForm = ({ onNameChange, onImageChange, onUniverseChange, onNe
         </div>
         <div style={styles.section}>
           <label style={styles.titles}>Nemesis: </label>
+          <select onChange={onNemesisChange}>
+          <option>Nothing in here</option>
+            {
+              heroes.map(hero => {
+                return <option value={hero._id}>{hero.name}></option>
+              })
+            }
+
+          </select>
           <input style={styles.input} type='text' placeholder='Type Nemesis Here' onChange={onNemesisChange} />
         </div>
         <button style={styles.button} onClick={submitVillain}> Add New Villain </button>
@@ -79,7 +88,8 @@ CreateVillainForm.propTypes = {
   onImageChange: PropTypes.func.isRequired,
   onUniverseChange: PropTypes.func.isRequired,
   onNemesisChange: PropTypes.func.isRequired,
-  submitVillain: PropTypes.func.isRequired
+  submitVillain: PropTypes.func.isRequired,
+  heroes: PropTypes.array.isRequired
 }
 
 export default CreateVillainForm

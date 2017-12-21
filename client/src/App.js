@@ -31,7 +31,7 @@ class App extends Component {
       url: '/api/heroes',
       method: 'GET'
     }).done((response) => {
-      console.log(response)
+      console.log('LOAD HEROES', response)
       this.setState({ heroes: response.superHeroes })
     })
   }
@@ -91,23 +91,38 @@ class App extends Component {
       <Router>
         <div>
           <Header />
+          
           <NavBar />
           <Route exact path='/' component={Home} />
-          <Route path='/create-hero' render={() => <CreateHeroContainer loadHeroesFromServer={this.loadHeroesFromServer} />} />
+          {
+            this.state.villains
+            ? <Route path='/create-hero' render={() => <CreateHeroContainer villains={this.state.villains} loadHeroesFromServer={this.loadHeroesFromServer} />} />
+            : 'No Villains Yet'
+          }
+          
           {
             this.state.heroes
             ? <Route path='/heroes' render={() =>  <HeroesList heroes={this.state.heroes} deleteHero={this.deleteHero} showUniqueHero={this.showUniqueHero} />} />
             : 'No Heroes'
           }
           <Route path='/hero/:heroId' render={() => <HeroContainer />} />
-          <Route path='/create-villain' render={() => <CreateVillainContainer loadVillainsFromServer={this.loadVillainsFromServer} />} />
+          {
+            this.state.heroes
+            ? <Route path='/create-villain' render={() => <CreateVillainContainer heroes={this.state.heroes} loadVillainsFromServer={this.loadVillainsFromServer} />} />
+            : 'No Heroes'
+          }
           {
             this.state.villains
             ? <Route path='/villains' render={() => <VillainsList villains={this.state.villains} deleteVillain={this.deleteVillain} showUniqueVillain={this.showUniqueVillain}/>} />
             : 'No Villains'
           }
-          <Route path='/edit-hero/:heroId' render={() => <EditHeroContainer />} />
-          <Route path='/villains/:villainId' render={() => <VillainContainer />} />
+          
+          {
+          this.state.villains
+          ? <Route path='/edit-hero/:heroId' render={() => <EditHeroContainer villains={this.state.villains}/>} />
+          : 'No Heroes'
+          }
+          <Route path='/villain/:villainId' render={() => <VillainContainer />} />
         </div>
       </Router>
     )

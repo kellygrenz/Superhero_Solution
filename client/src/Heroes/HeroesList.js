@@ -7,7 +7,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#22313F'
+    backgroundColor: '#412446'
     
   },
   header: {
@@ -26,7 +26,7 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#3FC380',
+    backgroundColor: '#43ac96',
     borderRadius: '2px'
   }
 }

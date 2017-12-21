@@ -5,7 +5,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#22313F'
+    backgroundColor: '#412446'
   },
   header: {
     fontFamily: 'Candal, sans-serif',

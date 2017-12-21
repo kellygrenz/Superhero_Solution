@@ -10,7 +10,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#22313F'
+    backgroundColor: '#412446'
   },
   header: {
     fontFamily: 'Candal, sans-serif',
@@ -77,6 +77,7 @@ class CreateVillainContainer extends Component {
           onUniverseChange={this.onUniverseChange}
           onNemesisChange={this.onNemesisChange}
           submitVillain={this.submitVillain}
+          heroes={this.props.heroes}
         />
         </div>
       </div>

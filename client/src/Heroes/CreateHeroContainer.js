@@ -10,7 +10,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#22313F'
+    backgroundColor: '#412446'
   },
   header: {
     fontFamily: 'Candal, sans-serif',
@@ -68,6 +68,7 @@ class CreateHeroContainer extends Component {
   }
 
   render() {
+    
     return (
       <div>
         <div style={styles.container}>
@@ -76,12 +77,14 @@ class CreateHeroContainer extends Component {
         </div>
         <div style={styles.form}>
         <CreateHeroForm 
+          villains={this.props.villains}
           onNameChange={this.onNameChange}
           onSuperPowerChange={this.onSuperPowerChange}
           onImageChange={this.onImageChange}
           onUniverseChange={this.onUniverseChange}
           onNemesisChange={this.onNemesisChange}
           handleSubmit={this.handleSubmit}
+          hero={this.props.hero}
         />
         </div>
       </div>

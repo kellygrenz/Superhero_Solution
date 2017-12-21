@@ -4,7 +4,7 @@ import {
   Link
 } from 'react-router-dom'
 
-const styles = {
+const style = {
   container: {
     width: '25vw',
     marginTop: '5%',
@@ -24,12 +24,12 @@ const styles = {
     width: '80%'
   },
   name: {
-    fontFamily: 'Candal, sans-serif',
+    fontFamily: 'Caveat, cursive',
     color: '#E9D460',
     marginBottom: '4%',
-    fontSize: '20px'
+    fontSize: '40px'
   },
-  bottomSection: {
+  stats: {
     borderTop: '1px dashed #ecf0f1',
     margin: '10%',
     paddingTop: '3%',
@@ -91,21 +91,21 @@ const styles = {
 
 const VillainCard = ({ villain, deleteVillain, showUniqueVillain }) => {
   return (
-      <div style={styles.container}>
-        <div style={styles.topSection}>
-          <h2 style={styles.name}>{villain.name}</h2>
-          <img style={styles.image} src={villain.img} />
+      <div style={style.container}>
+        <div style={style.topSection}>
+          <h2 style={style.name}>{villain.name}</h2>
+          <img style={style.image} src={villain.img} />
         </div>
-        <div style={styles.bottomSection}>
-          <p style={styles.titles}>Universe:</p>
-          <p style={styles.traits}>{villain.universe}</p>
-          <p style={styles.titles}>Nemesis:</p>
-          <p style={styles.traits}>{villain.nemesis}</p>
+        <div style={style.stats}>
+          <p style={style.titles}>Universe:</p>
+          <p style={style.traits}>{villain.universe}</p>
+          <p style={style.titles}>Nemesis:</p>
+          <p style={style.traits}>{villain.nemesis ? villain.nemesis.name :'no nemesis'}</p>
         </div>
-        <div style={styles.buttons}>
-          <button style={styles.infoButton} onClick={showUniqueVillain}>More Info</button>
-          <button style={styles.deleteButton} onClick={deleteVillain}>Delete</button>
-          <Link to={`/villains/${villain._id}`}>Edit Villain</Link>
+        <div style={style.buttons}>
+          <button style={style.infoButton} onClick={showUniqueVillain}>More Info</button>
+          <button style={style.deleteButton} onClick={deleteVillain}>Delete</button>
+          <Link to={`/villain/${villain._id}`}>View Villain</Link>
       </div>
     </div>
   )

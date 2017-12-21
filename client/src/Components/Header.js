@@ -3,7 +3,7 @@ import React from 'react'
 const style = {
   container: {
     display: 'flex',
-    background: '#F2784B',
+    background: '#43ac96',
     flexDirection: 'column',
     alignItems: 'center',
     paddingTop: '30px'
@@ -17,32 +17,35 @@ const style = {
     display: 'flex',
     alignItems: 'center'
   },
-  heroHeader: {
-    fontFamily: 'Candal, sans-serif',
-    color: '#C0392B',
-    marginTop: '2%'
+  hero: {
+    fontFamily: 'Caveat, cursive',
+    color: '#f6bb53',
+    fontSize: '50px'
+    
   },
-  villainHeader: {
-    fontFamily: 'Candal, sans-serif',
-    color: '#013243',
-    marginTop: '2%',
-    paddingLeft: '1%'
+  villain: {
+    fontFamily: 'Caveat, cursive',
+    color: '#432345',
+    paddingLeft: '1%',
+    fontSize: '50px'
   },
   and: {
-    fontFamily: 'Candal, sans-serif',
+    fontFamily: 'Caveat, cursive',
     color: '#fff',
     marginTop: '2%',
+    fontSize: '50px',
     marginLeft: '5px',
-    marginRight: '5px'
+    marginRight: '5px',
+    marginTop: '35px'
   }
 }
 
 const Header = () =>
   <div style={style.container}>
         <div style={style.header}>
-          <h1 style={style.heroHeader}>Superheroes</h1>
+          <h1 style={style.hero}>Superheroes</h1>
           <h1 style={style.and}> & </h1>
-          <h1 style={style.villainHeader}>Villains</h1>
+          <h1 style={style.villain}>Villains</h1>
         </div>
 
         <img src="images/sh_header.jpg" style={style.headerImg}/>

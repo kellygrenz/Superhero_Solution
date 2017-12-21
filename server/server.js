@@ -19,6 +19,6 @@ app.use(require('./config/error-handler'))
 
 app.use('/', villainRoutes)
 app.use('/', heroRoutes)
-const server = app.listen(port, () => console.log(`Running on port: ${port}🔥`))
+const server = app.listen(port, () => console.log(` 🚥 Running on port: ${port} 🚥 `))
 
 module.exports = server

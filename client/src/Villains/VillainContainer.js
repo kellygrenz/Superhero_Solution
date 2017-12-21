@@ -6,6 +6,7 @@ import VillainPage from './VillainPage'
 class VillainContainer extends Component {
 state = {
   villain: undefined,
+  comments: undefined,
   loading: true
 }
 
@@ -20,7 +21,7 @@ loadVillainFromServer = (id) => {
     method: 'GET'
   }).done((response) => {
     console.log(response)
-    this.setState({ villain: response.villain, loading: false})
+    this.setState({ villain: response.villain, loading: false, comments: response.villain.comments})
 
   })
 }
@@ -32,7 +33,7 @@ loadVillainFromServer = (id) => {
         <h1>Villain Container</h1>
         {
           !this.state.loading
-          ? <VillainPage villain={this.state.villain}/>
+          ? <VillainPage villain={this.state.villain} comments={this.state.comments}/>
           : 'These are not the villains you are looking for'
         }
       </div>

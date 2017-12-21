@@ -25,10 +25,10 @@ const styles = {
     width: '80%'
   },
   name: {
-    fontFamily: 'Candal, sans-serif',
+    fontFamily: 'Caveat, cursive',
     color: '#E9D460',
     marginBottom: '4%',
-    fontSize: '22px'
+    fontSize: '40px'
   },
   bottomSection: {
     borderTop: '1px dashed #ecf0f1',
@@ -46,7 +46,7 @@ const styles = {
     fontSize: '18px'
     
   },
-  traits: {
+  stats: {
     margin: '0%',
     paddingTop: '1%',
     paddingBottom: '2%',
@@ -99,11 +99,11 @@ const HeroCard = ({ hero, deleteHero, showUniqueHero }) => {
       </div>
       <div style={styles.bottomSection}>
         <p style={styles.titles}>Super Power:</p>
-        <p style={styles.traits}>{hero.superPower}</p>
+        <p style={styles.stats}>{hero.superPower}</p>
         <p style={styles.titles}>Universe:</p>
-        <p style={styles.traits}>{hero.universe}</p>
+        <p style={styles.stats}>{hero.universe}</p>
         <p style={styles.titles}>Nemesis:</p>
-        <p style={styles.traits}>{hero.nemesis}</p>
+        <p style={styles.stats}>{hero.nemesis ? hero.nemesis.name : 'no nemesis'}</p>
       </div>
       <div style={styles.buttons}>
         <button style={styles.infoButton} onClick={showUniqueHero}> More Info </button>

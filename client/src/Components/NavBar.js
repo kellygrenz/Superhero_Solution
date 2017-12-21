@@ -7,7 +7,7 @@ const styles = {
   navContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    backgroundColor: '#E9D460',
+    backgroundColor: '#f7bc51',
     padding: '40px',
     alignItems: 'center'
     

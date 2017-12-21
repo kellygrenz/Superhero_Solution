@@ -17,12 +17,14 @@ const style = {
 
 class HeroContainer extends Component {
   state = {
-    hero: undefined
+    hero: undefined,
+    comments: undefined
   }
 
   componentDidMount () {
     const heroId = this.props.match.params.heroId
     this.loadHero(heroId)
+    
   }
 
   loadHero = (id) => {
@@ -30,8 +32,7 @@ class HeroContainer extends Component {
       url: `/api/heroes/${id}`,
       method: 'GET'
     }).done((response) => {
-      console.log(response)
-      this.setState({ hero: response.hero})
+      this.setState({ hero: response.hero, comments: response.hero.comments})
     })
   }
 
@@ -41,7 +42,7 @@ class HeroContainer extends Component {
       <div style={style.container}>
         {
           this.state.hero
-          ?  <HeroPage hero={this.state.hero} />
+          ?  <HeroPage hero={this.state.hero} comments={this.state.comments} />
           : 'No Hero is Available'
         }
        
